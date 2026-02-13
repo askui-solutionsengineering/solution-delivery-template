@@ -1,0 +1,33 @@
+{
+  "id": "WEB_001",
+  "name": "Web Browser Gold Price",
+  "description": "Open a browser, search for current gold price in Germany (EUR), and report result with source and screenshot.",
+  "precondition": null,
+  "steps": [
+    {
+      "number": 1,
+      "action": "Open a web browser and open a new tab.",
+      "expectedResult": "Browser is open with a new tab."
+    },
+    {
+      "number": 2,
+      "action": "Search for the current gold price in Germany (in EUR).",
+      "expectedResult": "Search results show current gold price in EUR for Germany."
+    },
+    {
+      "number": 3,
+      "action": "Report the gold price and the source (website name or URL) in your task summary.",
+      "expectedResult": "Task summary contains gold price and source (website name or URL)."
+    },
+    {
+      "number": 4,
+      "action": "Include a screenshot of the browser showing the result.",
+      "expectedResult": "Screenshot of the browser with the result is included."
+    }
+  ],
+  "deliverables": {
+    "summaryRequired": true,
+    "screenshotRequired": true,
+    "screenshotSubject": "browser showing the gold price result"
+  }
+}

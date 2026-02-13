@@ -1,0 +1,3 @@
+Open the Clock app (or your system's date and time display).
+Read and report the current date and time shown in your task summary.
+Include a screenshot of the Clock app or time display.

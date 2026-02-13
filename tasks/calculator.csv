@@ -1,0 +1,4 @@
+Test case ID,Test case name,Precondition,Step number,Step description,Expected result
+CALC_001,Calculator 256*128,,1,Open the system calculator application (Windows Calculator or equivalent).,Calculator application is open.
+,,,2,Compute the following: 256 * 128.,Result 32768 is displayed.
+,,,3,Report the result in your task summary and include a screenshot of the calculator showing the result.,Task summary contains the result and a screenshot of the calculator showing the result.

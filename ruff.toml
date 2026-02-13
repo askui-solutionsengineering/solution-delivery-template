@@ -1,0 +1,40 @@
+[format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[lint.flake8-quotes]
+docstring-quotes = "double"
+inline-quotes = "double"
+multiline-quotes = "double"
+
+[lint]
+# Enable all rules
+select = ["ALL"]
+ignore = [
+    "ANN", # Type annotations - handled by mypy
+    "COM812", # Unused import
+    "D",   # Documentation - we'll handle this separately
+    "ERA", # Commented out code
+    "FBT", # Boolean trap
+    "ICN", # Import conventions
+    "ISC", # Implicit string concatenation
+    "N",   # Naming
+    "PGH", # PyGithub
+    "PL",  # Pylint
+    "PT",  # Pytest
+    "Q",   # Quotes
+    "RUF", # Ruff-specific rules
+    "S",   # Bandit
+    "SIM", # Simplify
+    "T",   # Pycodestyle
+    "TID", # isort
+    "UP",  # Pyupgrade
+    "W",   # Pycodestyle
+    "YTT", # flake8-2020
+]
+
+
+[lint.pycodestyle]
+max-line-length = 150

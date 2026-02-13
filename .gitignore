@@ -1,0 +1,6 @@
+*.DS_Store
+*__pycache__
+agent_workspace/*
+chat/*
+askui_chat.db
+html_reports/*
