@@ -1,6 +1,63 @@
-*.DS_Store
-*__pycache__
-agent_workspace/*
-chat/*
-askui_chat.db
-html_reports/*
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# askui
+.askui/
+askui_screenshots/
+askui_logs/
+reports/
+.askui_cache/
+agent_workspace/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+config/test_config.py
+
+# Logs
+*.log
+logs/
+
+# pdm
+.pdm-python
+pdm.lock
+pyproject.toml
