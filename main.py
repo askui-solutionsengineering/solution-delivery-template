@@ -1,4 +1,5 @@
 import argparse
+import logging
 from datetime import datetime, timezone
 from dotenv import load_dotenv
 from pathlib import Path
@@ -30,6 +31,7 @@ from askui.models.shared.prompts import ActSystemPrompt
 
 from helpers import get_agent_tools
 
+logger = logging.getLogger(__name__)
 
 PROMPTS_DIR = Path(__file__).parent / "prompts"
 
