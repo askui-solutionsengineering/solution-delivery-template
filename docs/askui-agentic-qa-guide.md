@@ -15,6 +15,7 @@ Version 1.0 · March 2026 | AskUI GmbH · Confidential | askui.com
 ## Why To Use Agentic QA?
 
 An AI agent is an AI system that can execute a task by observing, planning and executing actions. In the context of QA, we define QA agents as special agents that can operate real devices in a real environment and are specifically designed to execute actions following test definitions like a human tester.
+This way, tests can be executed automatically without the need to be specifically implemented beforehand by a Test Automation Engineer.
 Using QA agents for testing leads to a fundamental paradigm shift. Testers can focus on describing **what** to test in plain language, e.g. "Click on the Login Button", the agent will then figure out **how**, e.g. "Move the Mouse there and click".
 Hence, testers no longer need to write selector-based step-by-step code that breaks as soon as the UI moves a pixel. Instead, they are authoring **intent**, i.e., clear instructions that an intelligent agent interprets and executes, adapting to whatever it encounters on screen.
 
@@ -26,18 +27,12 @@ Hence, testers no longer need to write selector-based step-by-step code that bre
 
 ## How to Use Agentic QA?
 
-Agentic QA only works in production when the architecture is right. Most demo-stage agents look impressive but fail under real enterprise constraints, due to different environments, VDIs, legacy apps, or security perimeters. AskUI solves this issue with a purpose-built two-layer stack:
-
-![2-Layer Architecture: Thinking Layer and AgentOS](imgs/architecture-2-layer.svg)
-
-The Thinking Layer (Brain) is the LLM-powered reasoning engine. It reads your test cases and system prompt, understands the intent behind each step, and plans which actions to take next. AskUI is model-agnostic, so the underlying LLM can be swapped without changing your tests.
-AgentOS (Hands) is the execution environment where the agent operates. It provides native OS-level control on any target, a local desktop, a remote VM, a VDI session, or even an embedded device, so your tests run identically regardless of where the application lives.
-
-Your job as a QA team is **writing clear test cases and system prompts**. The agent's interactions with the application are handled automatically by AskUI's infrastructure.
+Most demo-stage computer-use agents look impressive at first glance, but fail under real enterprise constraints, due to different environments, VDIs, pecularities of legacy apps, or security perimeters. AskUI solves this issue with a purpose-built tech stack that is battle-proved against complex applications in real-world entprise environments. Hence, you do not need to waste your time debugging code or taking care of extensive and complex integrations, but instead you can focus on **writing clear test cases and system prompts** from day 1.
 
 ![End-to-end flow: Author, Source, Execute, Report](imgs/end-to-end-flow.svg)
 
-The test cases and system prompts are written in plain text (CSV or Markdown) and stored in a central repository. During testing, the agent reads those instructions, executes them on the target environment via AgentOS, and compiles a detailed report.
+AskUI natively integrates with existing and proven test formats, such as CSV, Excel, or XRay on your test repositories (SharePoint, XRay, Git, ...).
+During testing, the AskUI QA agent reads the instructions from your test case definition, executes them on the target environment using the AskUI AgentOS, and compiles a detailed report once finished.
 Test cases and system prompts should live in **one place** that is versioned and accessible. The agent sources them at runtime, it does not have tests baked in.
 
 > **Working with AskUI QA Agents**
@@ -76,7 +71,7 @@ The example below may look reasonable at first glance, but it has several issues
 # System Prompt — E-Commerce QA Agent
 
 You are a QA agent testing the ACME webshop at https://shop.acme.com.
-You are logged in as a test user (user@test.acme.com / TestPass123).
+You are logged in as a test user.
 
 ## Rules
 - Always wait for pages to fully load before interacting.
@@ -154,7 +149,7 @@ What's wrong?
 Step 1 doesn't say where to search.
 Step 2 is ambiguous, first product from the top or from the left? By position or by name?
 Step 3 assumes a size dropdown exists for headphones. Expected results like "Search results show headphone products" and "Size is selected" are too vague for the agent to verify.
-Step 4 and Step five give instructions but do not specify them, e.g. where is the 'Add to Cart' button? How can it be identified?
+Step 4 and Step 5 give instructions but do not specify them, e.g. where is the 'Add to Cart' button? How can it be identified?
 
 Here is an improved version
 
