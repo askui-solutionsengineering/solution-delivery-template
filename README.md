@@ -43,6 +43,7 @@ solution-delivery-template/
 │       └── webbrowser.json        # JSON task
 ├── agent_workspace/               # Generated per run (timestamped)
 ├── .gitignore
+├── docs                           # helpful documents and how to guides
 └── README.md                      # This file
 ```
 
