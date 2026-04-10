@@ -1,4 +1,6 @@
 import argparse
+import logging
+import os
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -28,6 +30,10 @@ from askui.tools.store.universal import (
 from dotenv import load_dotenv
 
 from helpers import get_agent_tools
+
+LOG_LEVEL = os.environ.get("LOG_LEVEL", "WARNING").upper()
+logging.basicConfig(level=getattr(logging, LOG_LEVEL, logging.WARNING))
+logger = logging.getLogger("AskUI Task Runner")
 
 PROMPTS_DIR = Path(__file__).parent / "prompts"
 
