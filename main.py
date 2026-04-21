@@ -1,5 +1,6 @@
 import argparse
 import logging
+import os
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -32,15 +33,17 @@ from helpers import get_agent_tools
 from helpers.scratchpad_tools import ScratchpadReadTool, ScratchpadWriteTool
 from helpers.summary_report import SummaryCollector
 
+# Load Env variables, e.g. API Keys
+load_dotenv()
+
 logging.addLevelName(35, "IMPORTANT")
+LOG_LEVEL = os.environ.get("LOG_LEVEL", "WARNING").upper()
 logging.basicConfig(
     format="%(asctime)s %(levelname)s %(name)s: %(message)s",
     datefmt="%H:%M:%S",
+    level=getattr(logging, LOG_LEVEL, logging.WARNING),
 )
-logger = logging.getLogger(__name__)
-
-# Load Env variables, e.g. API Keys
-load_dotenv()
+logger = logging.getLogger("AskUI Task Runner")
 
 PROMPTS_DIR = Path(__file__).parent / "prompts"
 PROCEDURES_DIR = Path(__file__).parent / "procedures"
