@@ -29,6 +29,7 @@ from askui.tools.store.universal import (
 from dotenv import load_dotenv
 
 from helpers import get_agent_tools
+from helpers.scratchpad_tools import ScratchpadReadTool, ScratchpadWriteTool
 from helpers.summary_report import SummaryCollector
 
 logging.addLevelName(35, "IMPORTANT")
@@ -631,6 +632,8 @@ if __name__ == "__main__":
         ComputerListProcessTool(),
         ComputerListProcessWindowsTool(),
         ComputerSetWindowInFocusTool(),
+        ScratchpadReadTool(base_dir=AGENT_WORKSPACE),
+        ScratchpadWriteTool(base_dir=AGENT_WORKSPACE),
         # Custom tools
         *get_agent_tools(),
     ]
