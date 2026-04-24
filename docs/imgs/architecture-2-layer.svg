@@ -1,0 +1,44 @@
+<svg viewBox="0 0 680 340" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrow-down" markerWidth="8" markerHeight="8" refX="4" refY="8" orient="auto">
+      <path d="M0,0 L4,8 L8,0 Z" fill="#282650"/>
+    </marker>
+  </defs>
+
+  <!-- Layer 1: Thinking -->
+  <rect x="90" y="0" width="500" height="88" rx="12" fill="#282650"/>
+  <rect x="94" y="4" width="492" height="80" rx="10" fill="#282650" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <text x="340" y="54" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="white" text-anchor="middle">Thinking Layer (Brain)</text>
+  <text x="340" y="74" font-family="Inter, sans-serif" font-size="11" fill="rgba(255,255,255,0.6)" text-anchor="middle">LLM-powered reasoning &#183; Model-agnostic &#183; Reads your test cases &amp; system prompt</text>
+
+  <!-- Arrow -->
+  <line x1="340" y1="108" x2="340" y2="228" stroke="#282650" stroke-width="2" marker-end="url(#arrow-down)"/>
+
+  <!-- Layer 2: AgentOS -->
+  <rect x="90" y="232" width="500" height="88" rx="12" fill="#16a34a"/>
+  <rect x="94" y="236" width="492" height="80" rx="10" fill="#16a34a" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+  <text x="340" y="286" font-family="Inter, sans-serif" font-size="20" font-weight="700" fill="white" text-anchor="middle">AgentOS (Hands)</text>
+  <text x="340" y="306" font-family="Inter, sans-serif" font-size="11" fill="rgba(255,255,255,0.6)" text-anchor="middle">Native OS execution &#183; On-prem or remote &#183; Desktop, mobile, VDI, embedded</text>
+
+  <!-- Side labels -->
+  <!-- Layer 1 icon: lightbulb -->
+  <circle cx="60" cy="44" r="16" fill="#f0f0ff" stroke="#282650" stroke-width="1.5"/>
+  <path d="M55 40 Q55 34 60 34 Q65 34 65 40 Q65 44 62 46 L62 50 L58 50 L58 46 Q55 44 55 40Z" fill="none" stroke="#282650" stroke-width="1.5"/>
+  <line x1="58" y1="52" x2="62" y2="52" stroke="#282650" stroke-width="1.5"/>
+
+  <!-- Layer 2 icon: monitor -->
+  <circle cx="60" cy="276" r="16" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <rect x="52" y="268" width="16" height="12" rx="2" fill="none" stroke="#16a34a" stroke-width="1.5"/>
+  <line x1="60" y1="280" x2="60" y2="284" stroke="#16a34a" stroke-width="1.5"/>
+  <line x1="56" y1="284" x2="64" y2="284" stroke="#16a34a" stroke-width="1.5"/>
+
+  <!-- Your role callout -->
+  <rect x="600" y="0" width="80" height="88" rx="8" fill="#f0fdf4" stroke="#bbf7d0"/>
+  <text x="640" y="36" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="#16a34a" text-anchor="middle">YOUR</text>
+  <text x="640" y="50" font-family="Inter, sans-serif" font-size="9" font-weight="700" fill="#16a34a" text-anchor="middle">FOCUS</text>
+  <path d="M640 60 L640 80" stroke="#16a34a" stroke-width="1.5"/>
+  <circle cx="640" cy="80" r="2" fill="#16a34a"/>
+
+  <rect x="600" y="116" width="80" height="204" rx="8" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="640" y="220" font-family="Inter, sans-serif" font-size="9" fill="#9ca3af" text-anchor="middle" transform="rotate(-90 640 220)">Managed by AskUI</text>
+</svg>

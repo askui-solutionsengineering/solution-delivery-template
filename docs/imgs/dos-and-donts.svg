@@ -1,0 +1,33 @@
+<svg viewBox="0 0 680 220" xmlns="http://www.w3.org/2000/svg">
+  <!-- Do's -->
+  <rect x="0" y="0" width="330" height="220" rx="10" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="20" y="28" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#16a34a">DO</text>
+  <circle cx="26" cy="56" r="10" fill="#dcfce7"/><text x="26" y="60" font-family="Inter, sans-serif" font-size="11" fill="#16a34a" text-anchor="middle">&#10003;</text>
+  <text x="44" y="60" font-family="Inter, sans-serif" font-size="11" fill="#1a1a2e">Write steps as if training a new hire</text>
+  <circle cx="26" cy="86" r="10" fill="#dcfce7"/><text x="26" y="90" font-family="Inter, sans-serif" font-size="11" fill="#16a34a" text-anchor="middle">&#10003;</text>
+  <text x="44" y="90" font-family="Inter, sans-serif" font-size="11" fill="#1a1a2e">Include expected results for every step</text>
+  <circle cx="26" cy="116" r="10" fill="#dcfce7"/><text x="26" y="120" font-family="Inter, sans-serif" font-size="11" fill="#16a34a" text-anchor="middle">&#10003;</text>
+  <text x="44" y="120" font-family="Inter, sans-serif" font-size="11" fill="#1a1a2e">Keep test cases to 5&#8211;12 steps each</text>
+  <circle cx="26" cy="146" r="10" fill="#dcfce7"/><text x="26" y="150" font-family="Inter, sans-serif" font-size="11" fill="#16a34a" text-anchor="middle">&#10003;</text>
+  <text x="44" y="150" font-family="Inter, sans-serif" font-size="11" fill="#1a1a2e">Put shared context in the system prompt</text>
+  <circle cx="26" cy="176" r="10" fill="#dcfce7"/><text x="26" y="180" font-family="Inter, sans-serif" font-size="11" fill="#16a34a" text-anchor="middle">&#10003;</text>
+  <text x="44" y="180" font-family="Inter, sans-serif" font-size="11" fill="#1a1a2e">Version your tests alongside your code</text>
+  <circle cx="26" cy="206" r="10" fill="#dcfce7"/><text x="26" y="210" font-family="Inter, sans-serif" font-size="11" fill="#16a34a" text-anchor="middle">&#10003;</text>
+  <text x="44" y="210" font-family="Inter, sans-serif" font-size="11" fill="#1a1a2e">Start with your highest-value flows</text>
+
+  <!-- Don'ts -->
+  <rect x="350" y="0" width="330" height="220" rx="10" fill="#fef2f2" stroke="#fecaca" stroke-width="1.5"/>
+  <text x="370" y="28" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#dc2626">DON&#8217;T</text>
+  <circle cx="376" cy="56" r="10" fill="#fee2e2"/><text x="376" y="60" font-family="Inter, sans-serif" font-size="11" fill="#dc2626" text-anchor="middle">&#10007;</text>
+  <text x="394" y="60" font-family="Inter, sans-serif" font-size="11" fill="#1a1a2e">Write vague steps: &#8220;test the login&#8221;</text>
+  <circle cx="376" cy="86" r="10" fill="#fee2e2"/><text x="376" y="90" font-family="Inter, sans-serif" font-size="11" fill="#dc2626" text-anchor="middle">&#10007;</text>
+  <text x="394" y="90" font-family="Inter, sans-serif" font-size="11" fill="#1a1a2e">Skip expected results (how will you know?)</text>
+  <circle cx="376" cy="116" r="10" fill="#fee2e2"/><text x="376" y="120" font-family="Inter, sans-serif" font-size="11" fill="#dc2626" text-anchor="middle">&#10007;</text>
+  <text x="394" y="120" font-family="Inter, sans-serif" font-size="11" fill="#1a1a2e">Create one 40-step mega-test</text>
+  <circle cx="376" cy="146" r="10" fill="#fee2e2"/><text x="376" y="150" font-family="Inter, sans-serif" font-size="11" fill="#dc2626" text-anchor="middle">&#10007;</text>
+  <text x="394" y="150" font-family="Inter, sans-serif" font-size="11" fill="#1a1a2e">Repeat login instructions in every test</text>
+  <circle cx="376" cy="176" r="10" fill="#fee2e2"/><text x="376" y="180" font-family="Inter, sans-serif" font-size="11" fill="#dc2626" text-anchor="middle">&#10007;</text>
+  <text x="394" y="180" font-family="Inter, sans-serif" font-size="11" fill="#1a1a2e">Embed environment specifics in test cases</text>
+  <circle cx="376" cy="206" r="10" fill="#fee2e2"/><text x="376" y="210" font-family="Inter, sans-serif" font-size="11" fill="#dc2626" text-anchor="middle">&#10007;</text>
+  <text x="394" y="210" font-family="Inter, sans-serif" font-size="11" fill="#1a1a2e">Try to automate everything on day one</text>
+</svg>

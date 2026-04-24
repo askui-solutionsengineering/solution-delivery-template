@@ -1,0 +1,41 @@
+<svg viewBox="0 0 680 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#282650"/>
+    </marker>
+  </defs>
+
+  <!-- Step 1: Author -->
+  <rect x="0" y="10" width="140" height="100" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="70" y="40" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#16a34a" text-anchor="middle">You Author</text>
+  <text x="70" y="58" font-family="Inter, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Test cases (CSV/MD)</text>
+  <text x="70" y="72" font-family="Inter, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">+ System prompt</text>
+  <text x="70" y="96" font-family="Inter, sans-serif" font-size="9" fill="#9ca3af" text-anchor="middle">stored centrally</text>
+
+  <line x1="144" y1="60" x2="174" y2="60" stroke="#282650" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Step 2: Agent Reads -->
+  <rect x="178" y="10" width="140" height="100" rx="10" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="248" y="40" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#282650" text-anchor="middle">Agent Sources</text>
+  <text x="248" y="58" font-family="Inter, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Reads test cases</text>
+  <text x="248" y="72" font-family="Inter, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">+ system prompt</text>
+  <text x="248" y="96" font-family="Inter, sans-serif" font-size="9" fill="#9ca3af" text-anchor="middle">from your repo or TMS</text>
+
+  <line x1="322" y1="60" x2="352" y2="60" stroke="#282650" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Step 3: Execute -->
+  <rect x="356" y="10" width="140" height="100" rx="10" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="426" y="40" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#3b82f6" text-anchor="middle">Agent Executes</text>
+  <text x="426" y="58" font-family="Inter, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">via AgentOS on</text>
+  <text x="426" y="72" font-family="Inter, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">target environment</text>
+  <text x="426" y="96" font-family="Inter, sans-serif" font-size="9" fill="#9ca3af" text-anchor="middle">local, remote, or VDI</text>
+
+  <line x1="500" y1="60" x2="530" y2="60" stroke="#282650" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Step 4: Reports -->
+  <rect x="534" y="10" width="140" height="100" rx="10" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="604" y="40" font-family="Inter, sans-serif" font-size="11" font-weight="700" fill="#8b5cf6" text-anchor="middle">Reports Back</text>
+  <text x="604" y="58" font-family="Inter, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">Screenshots, logs,</text>
+  <text x="604" y="72" font-family="Inter, sans-serif" font-size="10" fill="#6b7280" text-anchor="middle">pass/fail per step</text>
+  <text x="604" y="96" font-family="Inter, sans-serif" font-size="9" fill="#9ca3af" text-anchor="middle">HTML report output</text>
+</svg>
