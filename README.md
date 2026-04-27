@@ -23,7 +23,6 @@ solution-delivery-template/
 ├── system_prompt.py               # System prompt builder (reads from prompts/)
 ├── requirements.txt               # Python dependencies
 ├── ruff.toml                      # Linting/formatting configuration
-├── .vscode/settings.json          # Editor & AskUI Shell terminal profile
 ├── helpers/                       # Custom tools and utilities
 │   ├── __init__.py
 │   ├── get_tools.py               # Tool factory function
@@ -88,38 +87,31 @@ A teardown file runs after all tasks in the folder complete. Use it to clean up:
 
 Before you begin, ensure you have:
 
-- **AskUI Shell** installed on your system
-- Python 3.12 or higher
-- Access to the AskUI platform with valid credentials
+- **Python** installed on your system
+- version >=3.11, <3.14
 
-### Installing AskUI Shell
-
-If you haven't already, install AskUI Shell following the [official installation guide](https://docs.askui.com/).
+- **AskUI Credentials** setup in the askui hub
 
 ## Installation
 
-### Step 1: Open AskUI Shell
+### Step 1: Install Python (First Time Only)
 
-Launch the AskUI Shell environment:
-
-```bash
-askui-shell
-```
+Install python on your system, e.g. [here](https://www.python.org/downloads/):
 
 ### Step 2: Configure AskUI Credentials (First Time Only)
 
-1. **Create an Access Token**
+**Create an Access Token**
    Follow the [Access Token Guide](https://docs.askui.com/02-how-to-guides/01-account-management/04-tokens#create-access-token).
 
-2. **Set Up Your Credentials**
-   Follow the [Credentials Setup Guide](https://docs.askui.com/04-reference/02-askui-suite/02-askui-suite/ADE/Public/AskUI-SetSettings#askui-setsettings).
 
-### Step 3: Set Up Python Environment
+### Step 3: Set Up Python Environment (First Time Only)
 
-Activate the virtual environment (run this each time you start a new terminal):
+Create the virtual environment and activate it:
 
 ```powershell
-AskUI-EnablePythonEnvironment -name 'AskUI-POC' -CreateIfNotExists
+python -m venv .venv
+.venv\Scripts\Activate (Windows)
+source .venv\bin\activate (Mac/Linux)
 ```
 
 ### Step 4: Install Dependencies
