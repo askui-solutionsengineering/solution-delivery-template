@@ -1,2 +1,2 @@
-askui[all]==0.25.1
+askui==0.31.0
 python-dotenv==1.2.1
