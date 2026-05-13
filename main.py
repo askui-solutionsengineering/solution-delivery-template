@@ -397,22 +397,33 @@ Only output the JSON array, nothing else.
 def run_selected_tests(
     agent: ComputerAgent,
     test_files: list[Path],
+    test_root: Path,
     caching_settings: CachingSettings | None = None,
     collector: SummaryCollector | None = None,
 ):
     """Run a list of selected test files, each with its full setup/teardown lifecycle."""
     for test_file in test_files:
         run_single_test_with_lifecycle(
-            agent, test_file, caching_settings=caching_settings, collector=collector
+            agent,
+            test_file,
+            test_root=test_root,
+            caching_settings=caching_settings,
+            collector=collector,
         )
 
 
-def _collect_folder_chain(folder: Path) -> list[Path]:
-    """Collect ancestor folders from filesystem root down to folder (inclusive)."""
+def _collect_folder_chain(folder: Path, test_root: Path) -> list[Path]:
+    """Collect ancestor folders from test_root down to folder (inclusive).
+
+    Only includes folders at or below test_root, so setup/teardown files
+    outside the test hierarchy are never picked up.
+    """
     chain: list[Path] = []
     current = folder
     while current != current.parent:
         chain.append(current)
+        if current == test_root:
+            break
         current = current.parent
     chain.reverse()
     return chain
@@ -421,6 +432,7 @@ def _collect_folder_chain(folder: Path) -> list[Path]:
 def run_single_test_with_lifecycle(
     agent: ComputerAgent,
     test_file: Path,
+    test_root: Path,
     caching_settings: CachingSettings | None = None,
     collector: SummaryCollector | None = None,
 ):
@@ -431,7 +443,7 @@ def run_single_test_with_lifecycle(
     """
     logger.info("Running single Test with lifecycle")
 
-    folder_chain = _collect_folder_chain(test_file.parent)
+    folder_chain = _collect_folder_chain(test_file.parent, test_root)
 
     # Build cumulative rules per folder level
 
@@ -469,6 +481,7 @@ def run_single_test_with_lifecycle(
 def run_folder_with_lifecycle(
     agent: ComputerAgent,
     folder: Path,
+    test_root: Path,
     caching_settings: CachingSettings | None = None,
     collector: SummaryCollector | None = None,
 ):
@@ -484,7 +497,7 @@ def run_folder_with_lifecycle(
 
     # Build (folder, cumulative_rules) for ancestors ABOVE the target folder.
     # The target's own rules are layered on top inside run_folder.
-    ancestor_chain = _collect_folder_chain(folder.parent)
+    ancestor_chain = _collect_folder_chain(folder.parent, test_root)
 
     levels: list[tuple[Path, str]] = []
     cumulative_rules = ""
@@ -667,6 +680,7 @@ if __name__ == "__main__":
                 run_selected_tests(
                     agent,
                     selected,
+                    test_root=TEST_FOLDER,
                     caching_settings=caching_settings,
                     collector=collector,
                 )
@@ -675,6 +689,7 @@ if __name__ == "__main__":
                 run_single_test_with_lifecycle(
                     agent,
                     TARGET,
+                    test_root=TEST_FOLDER,
                     caching_settings=caching_settings,
                     collector=collector,
                 )
@@ -683,6 +698,7 @@ if __name__ == "__main__":
                 run_folder_with_lifecycle(
                     agent,
                     TEST_FOLDER,
+                    test_root=TEST_FOLDER,
                     caching_settings=caching_settings,
                     collector=collector,
                 )
