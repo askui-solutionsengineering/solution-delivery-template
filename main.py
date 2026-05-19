@@ -132,8 +132,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--cache-strategy",
         type=str,
-        default="auto",
-        help="Caching strategy: 'auto', 'none' (disable caching), etc. (default: auto)",
+        default="none",
+        help="Caching strategy: 'auto', 'none' (disable caching), etc. (default: none)",
     )
     parser.add_argument(
         "--cache-dir",
