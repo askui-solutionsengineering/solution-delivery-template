@@ -608,6 +608,18 @@ if __name__ == "__main__":
         / "agent_workspace"
         / datetime.now(timezone.utc).strftime("%Y-%m-%d_%H-%M-%S")
     )
+    AGENT_WORKSPACE.mkdir(parents=True, exist_ok=True)
+
+    _file_handler = logging.FileHandler(
+        AGENT_WORKSPACE / "console.log", encoding="utf-8"
+    )
+    _file_handler.setFormatter(
+        logging.Formatter(
+            "%(asctime)s %(levelname)s %(name)s: %(message)s", datefmt="%H:%M:%S"
+        )
+    )
+    _file_handler.setLevel(LOG_LEVEL)
+    logging.getLogger().addHandler(_file_handler)
 
     # Build caching settings from CLI args
     cache_strategy = (
