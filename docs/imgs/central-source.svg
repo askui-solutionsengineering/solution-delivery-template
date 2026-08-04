@@ -1,0 +1,39 @@
+<svg viewBox="0 0 680 160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arr2" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#282650"/>
+    </marker>
+  </defs>
+
+  <!-- Central repo -->
+  <rect x="230" y="10" width="220" height="140" rx="12" fill="#282650"/>
+  <text x="340" y="44" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="white" text-anchor="middle">Central Test Repository</text>
+  <rect x="254" y="60" width="172" height="24" rx="4" fill="rgba(255,255,255,0.1)"/>
+  <text x="340" y="77" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.7)" text-anchor="middle">/system-prompt.md</text>
+  <rect x="254" y="90" width="172" height="24" rx="4" fill="rgba(255,255,255,0.1)"/>
+  <text x="340" y="107" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.7)" text-anchor="middle">/tests/*.csv</text>
+  <rect x="254" y="120" width="172" height="24" rx="4" fill="rgba(255,255,255,0.1)"/>
+  <text x="340" y="137" font-family="monospace" font-size="10" fill="rgba(255,255,255,0.7)" text-anchor="middle">/tests/*.md</text>
+
+  <!-- Sources on left -->
+  <rect x="0" y="20" width="120" height="44" rx="8" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="60" y="48" font-family="Inter, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Git repository</text>
+  <line x1="122" y1="42" x2="226" y2="60" stroke="#282650" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr2)"/>
+
+  <rect x="0" y="76" width="120" height="44" rx="8" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="60" y="104" font-family="Inter, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Jira / ALM / TMS</text>
+  <line x1="122" y1="98" x2="226" y2="90" stroke="#282650" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr2)"/>
+
+  <!-- Agents on right -->
+  <rect x="560" y="12" width="120" height="40" rx="8" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="620" y="38" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#16a34a" text-anchor="middle">Agent: Web QA</text>
+  <line x1="454" y1="50" x2="556" y2="36" stroke="#16a34a" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr2)"/>
+
+  <rect x="560" y="62" width="120" height="40" rx="8" fill="rgba(59,130,246,0.05)" stroke="#3b82f6"/>
+  <text x="620" y="88" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#3b82f6" text-anchor="middle">Agent: Desktop</text>
+  <line x1="454" y1="80" x2="556" y2="82" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr2)"/>
+
+  <rect x="560" y="112" width="120" height="40" rx="8" fill="rgba(245,158,11,0.05)" stroke="#f59e0b"/>
+  <text x="620" y="138" font-family="Inter, sans-serif" font-size="10" font-weight="600" fill="#f59e0b" text-anchor="middle">Agent: HMI / Auto</text>
+  <line x1="454" y1="110" x2="556" y2="128" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arr2)"/>
+</svg>
